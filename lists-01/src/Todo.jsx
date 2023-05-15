@@ -12,7 +12,6 @@ setTodoItem(event.target.value)
   const handleAddItem =() =>{
     if (todoItem !== '') {
       setItems([...items, todoItem]);
-      setTodoItem('')
     }
   }
   return (
