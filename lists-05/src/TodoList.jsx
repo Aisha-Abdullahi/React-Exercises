@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const TodoList = ({items, handleRemoveTodo}) => {
-  const [items, setItems] = useState(['Workout', 'Cleaning', 'Watch some lessons']);
+  const [items, setItems] = useState(['Code', 'Clean', 'Exercise', 'Eat']);
   const [item, setItem] = useState('');
 
   const handleAddTodo = () => {
