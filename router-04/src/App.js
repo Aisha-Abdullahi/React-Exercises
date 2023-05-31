@@ -5,6 +5,7 @@ import ShowGithubUser from './ShowGithubUser';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import NotFound from './NotFound';
+import GithubUser from './GithubUser';
 
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/counter" element={<ClickCounter />} />
-        <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="/users" element={<ShowGithubUser />} >
+          <Route path=':username' element={<GithubUser/>}/>
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
